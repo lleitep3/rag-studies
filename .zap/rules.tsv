@@ -1,0 +1,69 @@
+# ZAP Rules Configuration for RAG Study Project
+# Customize which rules to include/exclude during DAST scanning
+
+# Rule ID	IGNORE/WARN/FAIL	Notes
+10021	IGNORE	# X-Content-Type-Options - may not be relevant for API endpoints
+10023	IGNORE	# Information Disclosure - Suspicious Comments - acceptable for development
+10027	WARN	# Information Disclosure - Suspicious Comments - review needed
+10032	WARN	# Viewstate Scanner - review if present
+10037	FAIL	# Server Leaks Information via "X-Powered-By" Header - security risk
+10040	FAIL	# Secure Pages Include Mixed Content - critical
+10043	FAIL	# User Controllable JavaScript Event - XSS risk
+10045	FAIL	# Source Code Disclosure - critical security issue
+10049	FAIL	# Content Cacheability - review caching headers
+10050	FAIL	# Retrieved from Cache - potential info disclosure
+10054	FAIL	# Cookie No HttpOnly Flag - session security
+10055	FAIL	# CSP Scanner - content security policy issues
+10056	FAIL	# X-Debug-Token Information Leak - debug info in production
+10057	FAIL	# Username Hash Found - potential info disclosure
+10061	WARN	# X-AspNet-Version Response Header - information disclosure
+10062	FAIL	# PII Disclosure - personal information exposure
+10063	FAIL	# Feature Policy Header Not Set - security header missing
+10094	FAIL	# Base64 Disclosure - potential sensitive data
+10095	FAIL	# Backup File Disclosure - critical file exposure
+10096	FAIL	# Timestamp Disclosure - Unix timestamps in response
+10097	FAIL	# Hash Disclosure - password hashes exposed
+10098	FAIL	# Cross-Domain Misconfiguration - CORS issues
+10103	FAIL	# Weak Authentication Method - security issue
+10104	FAIL	# User Agent Fuzzer - unusual user agents
+10105	FAIL	# Weak Authentication Method - basic auth over HTTP
+10106	FAIL	# HTTP Only Site - HTTPS enforcement
+10107	FAIL	# Httpoxy - Proxy header vulnerability
+10108	FAIL	# Reverse Tabnabbing - window.opener vulnerability
+10109	FAIL	# Modern Web Application - security headers
+10110	FAIL	# Dangerous JS Functions - eval, setTimeout with string
+40003	FAIL	# CRLF Injection - HTTP response splitting
+40008	FAIL	# Parameter Tampering - input validation
+40009	FAIL	# Server Side Include - SSI injection
+40012	FAIL	# Cross Site Scripting (Reflected) - XSS vulnerability
+40013	FAIL	# Session Fixation - session security
+40014	FAIL	# Cross Site Scripting (Persistent) - stored XSS
+40016	FAIL	# Cross Site Scripting (Persistent) - DOM XSS
+40017	FAIL	# Cross Site Scripting (Persistent) - XSS in JSON
+40018	FAIL	# SQL Injection - database injection attacks
+40019	FAIL	# SQL Injection (MySQL) - MySQL specific
+40020	FAIL	# SQL Injection (Hypersonic SQL) - HyperSQL specific
+40021	FAIL	# SQL Injection (Oracle) - Oracle specific
+40022	FAIL	# SQL Injection (PostgreSQL) - PostgreSQL specific
+40023	FAIL	# Possible Username Enumeration - user discovery
+40024	FAIL	# SQL Injection (SQLite) - SQLite specific
+40025	FAIL	# Proxy Disclosure - proxy information leak
+40026	FAIL	# Cross Site Scripting (DOM Based) - DOM XSS
+40027	FAIL	# SQL Injection (MsSQL) - Microsoft SQL Server
+40028	FAIL	# LDAP Injection - LDAP injection attacks
+40029	FAIL	# Trace.axd Information Leak - ASP.NET debug
+90001	FAIL	# Insecure JSF ViewState - Java Server Faces
+90011	FAIL	# Charset Mismatch - encoding issues
+90017	FAIL	# XSLT Injection - XML stylesheet injection
+90019	FAIL	# Code Injection - server-side code injection
+90020	FAIL	# Remote OS Command Injection - command execution
+90021	FAIL	# XPath Injection - XML path injection
+90022	FAIL	# Application Error Disclosure - error information
+90023	FAIL	# XML External Entity Attack - XXE vulnerability
+90024	FAIL	# Generic Padding Oracle - cryptographic attack
+90025	FAIL	# Expression Language Injection - EL injection
+90026	FAIL	# SOAP Action Spoofing - web service attack
+90027	FAIL	# Cookie Slack Detector - cookie manipulation
+90028	FAIL	# Insecure HTTP Method - dangerous HTTP methods
+90029	FAIL	# SOAP XML Injection - SOAP service injection
+90030	FAIL	# WSDL File Passive Scanner - service discovery

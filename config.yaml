@@ -1,0 +1,18 @@
+# Exemplo de config.yaml
+loader:
+  type: "python" # ou 'pdf', 'markdown'
+  path: "./data/source_documents/"
+  glob: "**/*.py"
+
+text_splitter:
+  chunk_size: 1500
+  chunk_overlap: 200
+
+vector_store:
+  type: "chroma" # ou 'faiss'
+  persist_directory: "./vector_store_data/chroma"
+
+llm:
+  provider: "gemini" # ou 'openai'
+  model_name: "gemini-pro"
+  temperature: 0.1
