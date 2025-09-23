@@ -1,17 +1,26 @@
-# RAG Code Assistant
 
-> Um sistema RAG (Retrieval-Augmented Generation) completo e modular para análise inteligente de código Python.
+# RAG Code Assistant — Repositório de Estudos
 
-## 🎯 **O que é este projeto?**
+> **Este repositório é dedicado a estudos, experimentação e aprendizado sobre sistemas RAG (Retrieval-Augmented Generation) aplicados à análise inteligente de código Python.**
 
-Um assistente de código inteligente que:
-- 📖 **Lê e entende** seu código Python
+Aqui você encontrará exemplos, protótipos, testes de conceitos e implementações didáticas, sem compromisso com produção ou estabilidade. O objetivo é explorar ideias, aprender e compartilhar conhecimento sobre RAG, LLMs, busca semântica e arquitetura de sistemas inteligentes.
+
+---
+
+
+## 🎯 **Sobre o Projeto**
+
+Este projeto é um assistente de código inteligente que:
+- 📖 **Lê e entende** código Python
 - 🤔 **Responde perguntas** sobre arquitetura e implementação
 - 🔍 **Busca contextualmente** em toda a base de código
 - 💬 **Conversa naturalmente** sobre desenvolvimento
 - 🖥️ **Roda localmente** sem dependências externas
 
-## 🚀 **Quick Start**
+> **Atenção:** Este projeto é experimental e serve para fins de estudo. Sinta-se à vontade para explorar, modificar e contribuir com novas ideias!
+
+
+## 🚀 **Como começar**
 
 ### Demo Interativa
 ```bash
@@ -33,6 +42,7 @@ python main.py
 - "Como adicionar um novo loader?"
 - "Como usar o RAGEngine?"
 
+
 ## 📋 **Pré-requisitos**
 
 ### Obrigatórios
@@ -41,10 +51,10 @@ python main.py
   ```bash
   # Instalar Ollama
   curl -fsSL https://ollama.ai/install.sh | sh
-  
+
   # Baixar modelo (recomendado)
   ollama pull llama3.2:1b
-  
+
   # Iniciar servidor
   ollama serve
   ```
@@ -52,6 +62,7 @@ python main.py
 ### Opcionais (para funcionalidades completas)
 - **Google AI API Key** (para Gemini)
 - **ChromaDB embeddings** (para vector store completo)
+
 
 ## 🏗️ **Arquitetura**
 
@@ -68,6 +79,7 @@ src/
 - 🔧 **Strategy Pattern** - Múltiplas estratégias de busca
 - 📦 **Dependency Injection** - Baixo acoplamento
 
+
 ## 💡 **Funcionalidades**
 
 ### ✅ **Implementado**
@@ -82,6 +94,7 @@ src/
 - 🎛️ Parâmetros ajustáveis (chunk size, temperatura)
 - 🔄 Troca dinâmica de modelos
 - 💾 Persistência automática
+
 
 ## 🛠️ **Instalação**
 
@@ -118,6 +131,7 @@ ollama pull gemma3:4b
 ollama serve
 ```
 
+
 ## 🎮 **Como usar**
 
 ### 🚀 **Aplicativos**
@@ -138,7 +152,7 @@ from src.core.engine import create_rag_engine
 # Criar sistema RAG
 engine = create_rag_engine(
     loader_type="python",
-    vector_store_type="chroma", 
+    vector_store_type="chroma",
     llm_type="ollama",
     llm_kwargs={"model_name": "llama3.2:1b"}
 )
@@ -151,11 +165,13 @@ result = engine.ask("Como funciona o PythonLoader?")
 print(result['answer'])
 ```
 
+
 ## 📚 **Documentação**
 
 - 📖 **[Conceitos RAG](docs/rag-concepts.md)** - Teoria e fundamentos
 - 🏗️ **[Arquitetura](docs/architecture.md)** - Design e componentes
 - 🔧 **[Configuração](config.yaml)** - Parâmetros do sistema
+
 
 ## 🤝 **Contribuindo**
 
@@ -173,6 +189,7 @@ if loader_type == "my_type":
     return MyLoader(**kwargs)
 ```
 
+
 ## 🔬 **Tecnologias**
 
 - 🐍 **Python 3.8+**
@@ -181,6 +198,7 @@ if loader_type == "my_type":
 - 💎 **Google Gemini** - LLM remoto
 - 🎨 **ChromaDB** - Vector database
 - ⚡ **FastAPI** - API framework (futuro)
+
 
 ## 📊 **Status**
 
@@ -195,4 +213,9 @@ if loader_type == "my_type":
 
 ---
 
-**🤖 Experimente agora:** `cd apps/interactive-chat && python main.py`
+
+---
+
+**Este repositório é para fins de estudo e experimentação. Não há garantias de funcionamento em produção. Contribuições, sugestões e dúvidas são bem-vindas!**
+
+**Experimente agora:** `cd apps/interactive-chat && python main.py`
