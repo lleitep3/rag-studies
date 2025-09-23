@@ -1,13 +1,13 @@
 # 🚀 RAG Study Apps
 
-Coleção de aplicativos e demos do projeto RAG (Retrieval-Augmented Generation).
+Coleção de aplicativos e demos do projeto com RAG (Retrieval-Augmented Generation).
 
 ## 📱 **Aplicativos Disponíveis**
 
 ### 💬 **Interactive Chat** - `interactive-chat/`
 > **Chat interativo inteligente com seu código**
 
-Um assistente que conhece todo o seu código e responde perguntas sobre arquitetura, implementação e uso. Perfeito para explorar projetos grandes ou entender código legado.
+Um code assistente que codifica priorizando os seus padrões de código e sua forma de se organizar. Perfeito para explorar projetos grandes ou entender código legado.
 
 **Características:**
 - 🤖 Chat conversacional no terminal
