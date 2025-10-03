@@ -205,16 +205,17 @@ RESPOSTA:"""
         """
         # Atualiza campos específicos se fornecidos
         if 'temperature' in kwargs:
-            self.temperature = kwargs['temperature']
+            self.temperature = kwargs.pop('temperature')
         if 'base_url' in kwargs:
-            self.base_url = kwargs['base_url']
+            self.base_url = kwargs.pop('base_url')
             
+        # Atualiza kwargs restantes (sem temperature e base_url)
         self.kwargs.update(kwargs)
         
         # Re-inicializa o modelo com as novas configurações
         self._initialize_model()
         
-        print(f"✅ Configurações do modelo Ollama atualizadas: {kwargs}")
+        print(f"✅ Configurações do modelo Ollama atualizadas")
     
     def get_available_models(self) -> List[str]:
         """

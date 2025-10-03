@@ -1,0 +1,28 @@
+# Display e formatação
+rich>=13.0.0
+colorama>=0.4.6
+
+# Core RAG dependencies
+langchain>=0.1.0
+langchain-community>=0.1.0
+langchain-huggingface>=0.0.1
+
+# Vector Store
+chromadb>=0.4.0
+
+# LLM
+ollama>=0.1.7
+langchain-ollama>=0.1.0
+
+# Embeddings
+sentence-transformers>=2.2.0
+transformers>=4.30.0
+
+# Utils
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Testing (opcional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0

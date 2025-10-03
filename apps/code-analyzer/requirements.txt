@@ -1,0 +1,14 @@
+# Dependências básicas do app
+# Gerado automaticamente - adicione conforme necessário
+
+# Interface e formatação
+rich>=13.0.0
+colorama>=0.4.6
+
+# Configuração
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Análise específica
+pandas>=2.0.0
+matplotlib>=3.5.0

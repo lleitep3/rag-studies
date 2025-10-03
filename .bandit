@@ -1,0 +1,27 @@
+# Configuração do Bandit para análise de segurança
+
+[bandit]
+# Testes a serem pulados
+skips: B101,B601
+
+# Excluir diretórios
+exclude_dirs:
+  - /tests/
+  - /venv/
+  - /.venv/
+  - /env/
+  - /.env/
+  - /htmlcov/
+  - /.pytest_cache/
+  - /__pycache__/
+  - /build/
+  - /dist/
+  - /.git/
+
+# Nível de severidade mínimo para reportar
+# LOW, MEDIUM, HIGH
+severity: LOW
+
+# Nível de confiança mínimo para reportar  
+# LOW, MEDIUM, HIGH
+confidence: LOW

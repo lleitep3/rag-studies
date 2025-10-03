@@ -1,20 +1,42 @@
-# 🚀 RAG Study Apps
+# 📱 RAG Study Apps
 
 Coleção de aplicativos e demos do projeto com RAG (Retrieval-Augmented Generation).
 
-## 📱 **Aplicativos Disponíveis**
+## 🚀 **Apps Disponíveis**
 
-### 💬 **Interactive Chat** - `interactive-chat/`
+### 1. 🔍 **Code Review Demo** - `code-review-demo/`
+> **Sistema de revisão automatizada de código**
+
+**Status:** 🔄 Em desenvolvimento  
+**Descrição:** Análise automatizada de código Python com detecção de problemas de segurança, performance e qualidade.
+
+**Como usar:**
+```bash
+cd code-review-demo
+python main.py example.py
+
+# Análise recursiva
+python main.py ../../src --recursive
+
+# Foco em segurança
+python main.py example.py --focus security
+```
+
+**Funcionalidades:**
+- Detecção de vulnerabilidades de segurança
+- Análise de performance
+- Sugestões de melhorias arquiteturais
+- Identificação de boas práticas
+
+[📖 **Documentação completa**](code-review-demo/README.md)
+
+---
+
+### 2. 💬 **Interactive Chat** - `interactive-chat/`
 > **Chat interativo inteligente com seu código**
 
-Um code assistente que codifica priorizando os seus padrões de código e sua forma de se organizar. Perfeito para explorar projetos grandes ou entender código legado.
-
-**Características:**
-- 🤖 Chat conversacional no terminal
-- 🔍 Busca inteligente no código fonte  
-- 📚 Respostas contextualizadas com fontes
-- ⚡ Suporte a Ollama (local) e Gemini (cloud)
-- 🎨 Interface colorida e amigável
+**Status:** 🔄 Em desenvolvimento  
+**Descrição:** Code assistente que conversa sobre seu código priorizando seus padrões. Perfeito para explorar projetos grandes.
 
 **Como usar:**
 ```bash
@@ -22,11 +44,88 @@ cd interactive-chat
 python main.py
 ```
 
+**Comandos especiais:**
+- `/help` - Mostra ajuda
+- `/clear` - Limpa histórico
+- `/exit` - Sai do chat
+- `/model <nome>` - Troca o modelo
+
 [📖 **Documentação completa**](interactive-chat/README.md)
 
 ---
 
-## 🛠️ **Como Adicionar Novos Apps**
+### 3. 📊 **Code Analyzer** - `code-analyzer/`
+> **Análise de dados e extração de insights**
+
+**Status:** ✅ Completo [`NEW`]  
+**Descrição:** Aplicação de análise de dados usando RAG para extrair insights e padrões do código.
+
+**Como usar:**
+```bash
+cd code-analyzer
+
+# Com indexação de código
+python main.py --index-path ../../src --model llama3.2:1b
+
+# Com arquivo de configuração
+python main.py --config config.json
+```
+
+**Funcionalidades:**
+- Análise estatística de código
+- Extração de padrões
+- Geração de relatórios
+- Visualização de métricas (em desenvolvimento)
+
+---
+
+## 🔧 **Gerenciamento de Apps** [`NEW`]
+
+### Criar Novo App (Método Rápido - Recomendado)
+Use o gerador automático de apps:
+
+```bash
+# App básico
+python ../scripts/create_app.py nome-do-app
+
+# App de chat
+python ../scripts/create_app.py chat-app --type chat --author "Seu Nome"
+
+# App de análise
+python ../scripts/create_app.py analyzer --type analysis
+
+# API REST
+python ../scripts/create_app.py api-server --type api
+```
+
+**Tipos disponíveis:**
+- 🎯 **basic** - Template simples para qualquer propósito
+- 💬 **chat** - Chat interativo com loop de conversação
+- 📊 **analysis** - Análise de dados com RAG
+- 🌐 **api** - API REST com endpoints RAG
+
+### Listar Apps
+```bash
+# Lista simples
+python ../scripts/list_apps.py
+
+# Lista detalhada
+python ../scripts/list_apps.py --detailed
+
+# Filtrar por tipo
+python ../scripts/list_apps.py --type chat
+```
+
+### Remover Apps
+```bash
+# Com confirmação
+python ../scripts/remove_app.py nome-do-app
+
+# Sem confirmação (cuidado!)
+python ../scripts/remove_app.py nome-do-app --force
+```
+
+## 🔧 **Como Adicionar Novos Apps Manualmente**
 
 ### Estrutura Recomendada
 ```

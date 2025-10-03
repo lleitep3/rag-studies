@@ -1,0 +1,18 @@
+{
+  "app_name": "code-analyzer",
+  "app_type": "analysis",
+  "version": "1.0.0",
+  "loader_type": "python",
+  "vector_store_type": "chroma",
+  "llm_type": "ollama",
+  "model_name": "llama3.2:1b",
+  "index_path": "../../src",
+  "glob_pattern": "**/*.py",
+  "verbose": false,
+  "settings": {
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "chunk_size": 1000,
+    "chunk_overlap": 200
+  }
+}
